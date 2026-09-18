@@ -19,7 +19,7 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
-            object-position: center top; /* Foco perfeito no topo/rosto */
+            object-position: center top;
         }
         .card:hover .card-img-hover {
             transform: scale(1.06);
@@ -38,7 +38,7 @@
             background-size: 20px 20px;
             opacity: 0.6;
         }
-        /* Botão Flutuante WhatsApp ajustado para não sobrepor o rodapé */
+        /* Botão Flutuante WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 25px;
@@ -62,14 +62,41 @@
             transform: scale(1.1);
             color: #fff;
         }
+        /* Estilo do Rodapé Corporativo Inspirado no Modelo */
+        .footer-custom {
+            background-color: #1a1a1a;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        .footer-custom h6 {
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        .footer-custom ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-custom ul li a:hover {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Menu / Navbar -->
+    <!-- Menu / Navbar com Logomarca -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-mortarboard-fill"></i> Oliveira's Assessoria</a>
+            <!-- Logomarca (Certifique-se de enviar o ficheiro logo.png para o GitHub) -->
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <img src="logo.png" alt="Oliveira's Assessoria" style="height: 40px; max-width: 150px; object-fit: contain;" onerror="this.style.display='none'; document.getElementById('brand-text').style.display='block';">
+                <span id="brand-text" style="display: none;"><i class="bi bi-mortarboard-fill"></i> Oliveira's Assessoria</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -112,7 +139,7 @@
             </div>
             
             <div class="row g-4">
-                <!-- Card 1: Assessoria Acadêmica (Mulher madura executiva, braços cruzados) -->
+                <!-- Card 1: Assessoria Acadêmica -->
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm border-0 position-relative pb-4">
                         <div class="card-img-wrapper m-3 mb-0">
@@ -134,7 +161,7 @@
                     </div>
                 </div>
 
-                <!-- Card 2: Treinamentos Comerciais (Homem executivo) -->
+                <!-- Card 2: Treinamentos Comerciais -->
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm border-0 position-relative pb-4">
                         <div class="card-img-wrapper m-3 mb-0">
@@ -156,7 +183,7 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Aulas Práticas (Engrenagem / Laboratório) -->
+                <!-- Card 3: Aulas Práticas -->
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm border-0 position-relative pb-4">
                         <div class="card-img-wrapper m-3 mb-0">
@@ -322,33 +349,44 @@
         </div>
     </section>
 
-    <!-- Balão Flutuante do WhatsApp Ajustado -->
+    <!-- Balão Flutuante do WhatsApp -->
     <a href="https://api.whatsapp.com/send?phone=5511996337293" class="whatsapp-float" target="_blank" title="Fale pelo WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
 
-    <!-- Rodapé Profissional com Ícones Corrigidos -->
-    <footer class="bg-dark text-white pt-5 pb-3">
+    <!-- Rodapé Corporativo em 4 Colunas com os seus Dados -->
+    <footer class="footer-custom pt-5 pb-3">
         <div class="container">
             <div class="row g-4 mb-4">
-                <div class="col-md-4">
-                    <h6 class="text-uppercase fw-bold mb-3 text-warning"><i class="bi bi-grid-fill"></i> Navegação</h6>
-                    <ul class="list-unstyled text-secondary small">
-                        <li class="mb-2"><a href="#servicos" class="text-decoration-none text-light">Nossos Serviços</a></li>
-                        <li class="mb-2"><a href="#sobre" class="text-decoration-none text-light">Quem Somos</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-light" data-bs-toggle="modal" data-bs-target="#modalCarrinho">Carrinho de Orçamento</a></li>
+                <!-- Coluna 1: Categorias -->
+                <div class="col-md-3">
+                    <h6><i class="bi bi-grid-fill text-primary"></i> Categorias</h6>
+                    <ul class="list-unstyled small mt-2">
+                        <li class="mb-2"><a href="#servicos">Assessoria Acadêmica</a></li>
+                        <li class="mb-2"><a href="#servicos">Treinamentos Comerciais</a></li>
+                        <li class="mb-2"><a href="#servicos">Aulas Práticas</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h6 class="text-uppercase fw-bold mb-3 text-warning"><i class="bi bi-headset"></i> Contato</h6>
-                    <ul class="list-unstyled small text-light">
-                        <li class="mb-2"><i class="bi bi-whatsapp"></i> (11) 99633-7293</li>
-                        <li class="mb-2"><i class="bi bi-envelope-fill"></i> reinaldooliveiraassessoria@gmail.com</li>
+                <!-- Coluna 2: Minha Conta -->
+                <div class="col-md-3">
+                    <h6><i class="bi bi-person-fill text-primary"></i> Minha Conta</h6>
+                    <ul class="list-unstyled small mt-2">
+                        <li class="mb-2"><a href="#sobre">Quem Somos</a></li>
+                        <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#modalCarrinho">Carrinho de Orçamento</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h6 class="text-uppercase fw-bold mb-3 text-warning"><i class="bi bi-shield-lock-fill"></i> Compra Segura & Pagamentos</h6>
-                    <p class="small text-light mb-2">Ambiente 100% seguro com criptografia SSL.</p>
+                <!-- Coluna 3: Contato -->
+                <div class="col-md-3">
+                    <h6><i class="bi bi-headset text-primary"></i> Contato</h6>
+                    <ul class="list-unstyled small mt-2">
+                        <li class="mb-2"><i class="bi bi-whatsapp text-success"></i> (11) 99633-7293</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-warning"></i> reinaldooliveiraassessoria@gmail.com</li>
+                    </ul>
+                </div>
+                <!-- Coluna 4: Compra Segura -->
+                <div class="col-md-3">
+                    <h6><i class="bi bi-shield-lock-fill text-primary"></i> Compra Segura</h6>
+                    <p class="small text-muted mb-2">Ambiente 100% seguro com criptografia SSL.</p>
                     <div class="d-flex flex-wrap align-items-center gap-2 mt-2">
                         <span class="badge bg-light text-dark py-2 px-2"><i class="bi bi-lock-fill text-success"></i> SSL Seguro</span>
                         <span class="badge bg-light text-dark py-2 px-2"><i class="bi bi-upc-scan text-primary"></i> Boleto</span>
@@ -359,7 +397,7 @@
             </div>
             <hr class="border-secondary">
             <div class="row align-items-center">
-                <div class="col-md-8 text-center text-md-start small text-secondary">
+                <div class="col-md-8 text-center text-md-start small text-muted">
                     &copy; 2026 Oliveira's Assessoria - Todos os direitos reservados. | CNPJ: 50.835.246/0001-51
                 </div>
                 <div class="col-md-4 text-center text-md-end mt-2 mt-md-0">
