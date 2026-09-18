@@ -1,443 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oliveira's Assessoria & Treinamentos</title>
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <style>
-        /* Efeito de Zoom interativo e enquadramento ajustado para mostrar os rostos perfeitamente */
-        .card-img-wrapper {
-            overflow: hidden;
-            border-radius: 8px;
-            background: #f8f9fa;
-        }
-        .card-img-hover {
-            transition: transform 0.4s ease;
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            object-position: center 25%; /* Foco perfeito nos rostos/centro das fotos */
-        }
-        .card:hover .card-img-hover {
-            transform: scale(1.06);
-        }
-        /* Fundo interativo para a Hero Section */
-        .hero-interactive {
-            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 50%, #084298 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-interactive::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10.1%);
-            background-size: 20px 20px;
-            opacity: 0.6;
-        }
-        /* Botão Flutuante WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 1050;
-            background-color: #25d366;
-            color: #fff;
-            width: 60px;
-            height: 60px;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            color: #fff;
-        }
-        /* Estilo do Rodapé Corporativo */
-        .footer-custom {
-            background-color: #1a1a1a;
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-        .footer-custom h6 {
-            color: #fff;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            margin-bottom: 1.2rem;
-            border-bottom: 2px solid #0d6efd;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-        .footer-custom ul li a {
-            color: #aaa;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .footer-custom ul li a:hover {
-            color: #fff;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assessoria para operações educacionais: comercial, atendimento, retenção, processos acadêmicos e aulas práticas.">
+  <meta name="theme-color" content="#102a43">
+  <title>Oliveira's Assessoria | Performance Comercial e Educacional</title>
+  <style>
+    :root{--navy:#102a43;--ink:#17324d;--blue:#145da0;--teal:#0f766e;--gold:#f2b84b;--paper:#f7f9fb;--line:#dce5ed;--muted:#53677b;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--white)}button,input,select,textarea{font:inherit}a{color:inherit}img{max-width:100%;height:auto}h1,h2,h3,p{margin-top:0}h1,h2,h3{line-height:1.17;letter-spacing:-.025em}h1{font-size:clamp(2.35rem,5vw,4.5rem)}h2{font-size:clamp(1.9rem,3vw,2.8rem)}h3{font-size:1.25rem}.container{width:min(1140px,calc(100% - 40px));margin:auto}.section{padding:84px 0}.section-alt{background:var(--paper)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;font-weight:800;color:var(--teal)}.muted{color:var(--muted)}.lead{font-size:1.14rem}.section-head{max-width:740px;margin-bottom:32px}.grid{display:grid;gap:20px}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 10px 30px rgba(16,42,67,.05)}.card p:last-child{margin-bottom:0}.tag{display:inline-block;background:#e7f3f1;color:#08635e;border-radius:99px;padding:4px 11px;font-size:.78rem;font-weight:700;margin-bottom:15px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:9px;border:2px solid transparent;font-weight:750;text-decoration:none;cursor:pointer;min-height:48px;text-align:center}.btn-primary{background:var(--gold);color:#172839}.btn-primary:hover{background:#ffd078}.btn-outline{border-color:#bad0e3;color:var(--navy);background:#fff}.btn-outline:hover{background:#eaf2f8}.btn-dark{background:var(--navy);color:#fff}.btn-dark:hover{background:#1b466e}.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.site-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}.brand img{width:155px;max-height:56px;object-fit:contain}.nav-links{display:flex;align-items:center;gap:22px}.nav-links a{text-decoration:none;font-size:.92rem;font-weight:700}.nav-links a:hover{color:var(--blue)}.menu-toggle{display:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-size:1.5rem;cursor:pointer}.hero{background:radial-gradient(circle at 85% 20%,#245c85 0,transparent 35%),linear-gradient(135deg,#102a43,#123d60);color:#fff;padding:92px 0 100px}.hero .eyebrow{color:#84e0d4}.hero-copy{max-width:810px}.hero p{max-width:690px;color:#d9e9f4}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.hero .btn-outline{background:transparent;border-color:#9bb7cb;color:#fff}.hero .btn-outline:hover{background:#ffffff1a}.hero-note{margin-top:34px;font-size:.88rem;color:#c9dce9}.audience .card{border-top:4px solid var(--teal)}.pain-list{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0}.pain-list li{border:1px solid var(--line);background:#fff;padding:10px 14px;border-radius:9px}.service-card{display:flex;flex-direction:column;overflow:hidden;padding:0}.service-card img{width:100%;height:185px;object-fit:cover}.service-body{padding:25px;display:flex;flex-direction:column;flex:1}.service-body .btn{margin-top:auto;align-self:flex-start}.service-body ul{padding-left:20px;color:var(--muted)}.service-body li{margin-bottom:5px}.steps{counter-reset:step}.step{position:relative;padding-left:58px}.step:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:0;top:0;color:var(--teal);font-weight:850;font-size:1.45rem}.ia-panel{background:#e9f4f2;border:1px solid #b9d9d3;border-radius:18px;padding:32px}.ia-panel ul{columns:2;padding-left:20px}.about{display:grid;grid-template-columns:minmax(250px,.75fr) 1.25fr;gap:46px;align-items:center}.about img{width:100%;max-height:500px;object-fit:cover;object-position:top;border-radius:18px}.diagnosis{background:var(--navy);color:#fff}.diagnosis .muted{color:#d5e4ef}.form-panel{background:#fff;color:var(--ink);border-radius:18px;padding:28px}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label,fieldset legend{font-weight:750;font-size:.92rem}.field input,.field select,.field textarea{width:100%;border:1px solid #aebfcd;border-radius:8px;padding:12px;background:#fff;color:var(--ink)}fieldset{border:0;padding:0;margin:0}.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}.checks label{display:flex;align-items:flex-start;gap:8px;font-weight:400}.checks input{margin-top:5px}.form-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:22px}.form-note{font-size:.83rem;color:var(--muted);margin:10px 0 0}.result{display:none;margin-top:24px;padding:22px;border:1px solid #b8d7d2;border-radius:12px;background:#eff8f6}.result.show{display:block}.result ul{margin-bottom:18px}.consent{display:flex;align-items:flex-start;gap:9px;font-size:.9rem}.consent input{margin-top:6px}button:disabled{opacity:.65;cursor:not-allowed}.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{cursor:pointer;font-weight:750}.faq p{margin:12px 0 0;color:var(--muted)}.final-cta{background:#e7f3f1;text-align:center}.final-cta p{max-width:660px;margin:0 auto 24px}.footer{background:#0c2439;color:#d9e7f0;padding:50px 0 24px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1.2fr;gap:32px}.footer a{color:#d9e7f0}.footer ul{list-style:none;padding:0;margin:0}.footer li{margin:7px 0}.footer img{width:165px;background:#fff;border-radius:8px;padding:5px}.footer small{display:block;border-top:1px solid #375269;margin-top:36px;padding-top:18px}.whatsapp{position:fixed;right:22px;bottom:22px;z-index:9;background:#147d53;color:#fff;text-decoration:none;border-radius:99px;padding:12px 17px;box-shadow:0 8px 25px #0004;font-weight:750}.whatsapp:hover{background:#0c6140}#servicos,#metodo,#sobre,#diagnostico,#contato{scroll-margin-top:90px}
+    @media(max-width:900px){.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:1fr 1fr}.nav-links{gap:12px}.nav-links a{font-size:.84rem}.about{gap:26px}}
+    @media(max-width:700px){.container{width:min(100% - 32px,1140px)}.section{padding:62px 0}.hero{padding:66px 0}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 16px 24px;box-shadow:0 14px 24px #102a4320;flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links .btn{width:100%}.grid-4,.grid-3,.grid-2,.form-grid,.about,.footer-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.ia-panel ul{columns:1}.checks{grid-template-columns:1fr}.hero-actions .btn{width:100%}.service-card img{height:200px}.whatsapp{right:14px;bottom:14px;font-size:.86rem}.footer{padding-bottom:80px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
 </head>
 <body>
-
-    <!-- Menu / Navbar com Fundo Branco -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container">
-            <!-- Logomarca -->
-            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-                <img src="logo.png" alt="Oliveira's Assessoria" style="height: 45px; max-width: 160px; object-fit: contain;" onerror="this.style.display='none'; document.getElementById('brand-text').style.display='block';">
-                <span id="brand-text" class="text-dark" style="display: none;"><i class="bi bi-mortarboard-fill text-primary"></i> Oliveira's Assessoria</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center gap-3">
-                    <li class="nav-item"><a class="nav-link text-dark fw-semibold active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#servicos">Nossos Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#sobre">Quem Somos</a></li>
-                    <!-- Botão do Carrinho no Menu -->
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-outline-warning btn-sm position-relative px-3 py-2 fw-semibold text-dark border-warning" data-bs-toggle="modal" data-bs-target="#modalCarrinho">
-                            <i class="bi bi-cart4 fs-6 text-warning"></i> Carrinho de Orçamento
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Banner Principal (Hero Section com Fundo Interativo) -->
-    <header class="hero-interactive text-white text-center py-5 shadow-sm position-relative">
-        <div class="container py-4 position-relative" style="z-index: 2;">
-            <h1 class="display-5 fw-bold mb-3">Transforme sua equipe comercial em uma máquina de alta performance</h1>
-            <p class="lead col-lg-8 mx-auto mb-4">Unimos técnicas tradicionais validadas, engenharia de prompts aplicada à inteligência artificial e processos acadêmicos estruturados para conversão e retenção.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#servicos" class="btn btn-light btn-lg fw-semibold text-primary shadow-sm">Ver Nossos Serviços</a>
-                <button type="button" class="btn btn-warning btn-lg fw-semibold text-dark shadow-sm" data-bs-toggle="modal" data-bs-target="#modalCarrinho">
-                    <i class="bi bi-cart4"></i> Solicitar Orçamento
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Seção de Serviços -->
-    <section id="servicos" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Soluções Disponíveis</h2>
-                <p class="text-muted">Passe o rato sobre as imagens para conhecer nossos pilares de atendimento</p>
-            </div>
-            
-            <div class="row g-4">
-                <!-- Card 1: Assessoria Acadêmica -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 position-relative pb-4">
-                        <div class="card-img-wrapper m-3 mb-0">
-                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=700&q=80" alt="Assessoria Acadêmica" class="card-img-hover">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <span class="badge bg-secondary align-self-start mb-2">Acadêmica & Retenção</span>
-                            <h5 class="card-title text-primary fw-bold">Assessoria Acadêmica</h5>
-                            <p class="card-text text-muted flex-grow-1">Foco no Customer Success Educacional: jornada do aluno, padronização de suporte, análise de dados e prevenção contra evasão (churn).</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top mb-3">
-                                <span class="fw-bold text-muted small">Valores sob consulta</span>
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill shadow-sm py-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#modalAcademica">
-                                    <i class="bi bi-mortarboard-fill"></i> VEJA DETALHES
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Treinamentos Comerciais -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 position-relative pb-4">
-                        <div class="card-img-wrapper m-3 mb-0">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80" alt="Treinamentos Comerciais" class="card-img-hover">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <span class="badge bg-secondary align-self-start mb-2">Comercial & Vendas</span>
-                            <h5 class="card-title text-primary fw-bold">Treinamentos Comerciais</h5>
-                            <p class="card-text text-muted flex-grow-1">Prospecção omnichannel, contorno de objeções, copywriting persuasivo, engenharia de prompts com IA e ritos de gestão diária.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top mb-3">
-                                <span class="fw-bold text-muted small">Valores sob consulta</span>
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-outline-warning btn-sm rounded-pill shadow-sm py-2 text-dark fw-semibold" data-bs-toggle="modal" data-bs-target="#modalTreinamentos">
-                                    <i class="bi bi-star-fill"></i> VEJA DETALHES
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Aulas Práticas -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 position-relative pb-4">
-                        <div class="card-img-wrapper m-3 mb-0">
-                            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=700&q=80" alt="Aulas Práticas" class="card-img-hover">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <span class="badge bg-secondary align-self-start mb-2">Práticas & Operacional</span>
-                            <h5 class="card-title text-primary fw-bold">Aulas Práticas</h5>
-                            <p class="card-text text-muted flex-grow-1">Assessoramento especializado para parametrização, agendamentos, comprovações no Place e acompanhamento de auditorias acadêmicas.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top mb-3">
-                                <span class="fw-bold text-muted small">Valores sob consulta</span>
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-outline-info btn-sm rounded-pill shadow-sm py-2" data-bs-toggle="modal" data-bs-target="#modalPraticas">
-                                    <i class="bi bi-info-circle-fill"></i> VEJA DETALHES
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal do Carrinho de Orçamento -->
-    <div class="modal fade" id="modalCarrinho" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content shadow-lg border-0">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title fw-bold"><i class="bi bi-cart4"></i> Carrinho de Solicitação & Orçamento</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body p-4 bg-light">
-                    <form action="mailto:reinaldooliveiraassessoria@gmail.com" method="POST" enctype="text/plain">
-                        <p class="text-muted small mb-3">Selecione os serviços de interesse e preencha os seus dados para envio direto ao nosso e-mail.</p>
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold small">Serviços Desejados:</label>
-                            <div class="form-check mb-1">
-                                <input class="form-check-input" type="checkbox" name="Servico_Academica" value="Sim" id="srv1">
-                                <label class="form-check-label small" for="srv1">Assessoria Acadêmica</label>
-                            </div>
-                            <div class="form-check mb-1">
-                                <input class="form-check-input" type="checkbox" name="Servico_Treinamentos" value="Sim" id="srv2">
-                                <label class="form-check-label small" for="srv2">Treinamentos Comerciais</label>
-                            </div>
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" name="Servico_Praticas" value="Sim" id="srv3">
-                                <label class="form-check-label small" for="srv3">Aulas Práticas</label>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="nome" class="form-label fw-semibold small">Seu Nome / Instituição:</label>
-                            <input type="text" class="form-control form-control-sm" id="nome" name="Nome" required placeholder="Ex: João Silva">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label fw-semibold small">Seu E-mail:</label>
-                            <input type="email" class="form-control form-control-sm" id="email" name="Email" required placeholder="seuemail@exemplo.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="mensagem" class="form-label fw-semibold small">Observações:</label>
-                            <textarea class="form-control form-control-sm" id="mensagem" name="Mensagem" rows="2" placeholder="Detalhes adicionais..."></textarea>
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary fw-semibold">
-                                <i class="bi bi-envelope-fill"></i> Enviar para reinaldooliveiraassessoria@gmail.com
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal: Assessoria Acadêmica -->
-    <div class="modal fade" id="modalAcademica" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title fw-bold"><i class="bi bi-mortarboard-fill"></i> Assessoria Acadêmica, Processos e Retenção (Success)</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body p-4 bg-white">
-                    <p class="text-muted mb-4">No setor educacional, o comercial não termina na matrícula: ele se perpetua na retenção e no sucesso do estudante ao longo de toda a jornada.</p>
-                    <div class="mb-4">
-                        <h5 class="text-primary fw-bold">1. Organização e Processos Acadêmicos</h5>
-                        <p class="text-muted">
-                            <strong>Mapeamento da Jornada do Aluno:</strong> Desenho detalhado de todos os pontos de contato, desde a recepção e onboarding até a conclusão ou renovação.<br><br>
-                            <strong>Padronização de Suporte e Secretaria:</strong> Redução de gargalos e prevenção contra evasão (churn).<br><br>
-                            <strong>Aliança Comercial x Acadêmica:</strong> Garantir que a promessa feita na venda seja entregue.
-                        </p>
-                    </div>
-                    <div class="mb-4">
-                        <h5 class="text-primary fw-bold">2. Relacionamento Estratégico</h5>
-                        <p class="text-muted">Uso inteligente de CRMs educacionais e touchpoints proativos em momentos críticos.</p>
-                    </div>
-                    <div class="mb-4">
-                        <h5 class="text-primary fw-bold">3. Análise de Dados para Retenção</h5>
-                        <p class="text-muted">Indicadores de evasão precoce (Early Warnings) e programas de indicação (Member Get Member).</p>
-                    </div>
-                    <div class="mb-2">
-                        <h5 class="text-primary fw-bold">4. Técnicas de Retenção e Recuperação</h5>
-                        <p class="text-muted">Abordagem consultiva humanizada e estratégias de upsell/cross-sell educacional.</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://api.whatsapp.com/send?phone=5511996337293&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Assessoria%20Acadêmica." class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i> Solicitar via WhatsApp</a>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal: Treinamentos Comerciais -->
-    <div class="modal fade" id="modalTreinamentos" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title fw-bold"><i class="bi bi-briefcase-fill"></i> O DNA do Nosso Treinamento Comercial</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body p-4 bg-white">
-                    <p class="text-muted mb-4">Transformamos equipes comuns em máquinas de alta performance de vendas e retenção, unindo técnicas tradicionais validadas, engenharia de prompts aplicada à inteligência artificial e processos acadêmicos estruturados.</p>
-                    <div class="mb-4">
-                        <h5 class="text-primary fw-bold">📌 Módulo 1: Abordagem, Prospecção e Padronização</h5>
-                        <p class="text-muted">Playbooks de atendimento omnichannel, qualificação de leads Inbound e cadências ativas Outbound.</p>
-                    </div>
-                    <div class="mb-4">
-                        <h5 class="text-primary fw-bold">📌 Módulo 2: Gestão de Objeções e Conversão</h5>
-                        <p class="text-muted">Matriz de barreiras (preço, tempo, concorrência) e simulações práticas (role-play).</p>
-                    </div>
-                    <div class="mb-4">
-                        <h5 class="text-primary fw-bold">📌 Módulo 3: Copywriting e Gatilhos Mentais</h5>
-                        <p class="text-muted">Escrita persuasiva para propostas e storytelling com conexões emocionais de urgência.</p>
-                    </div>
-                    <div class="mb-4">
-                        <h5 class="text-primary fw-bold">📌 Módulo 4: Inteligência Artificial em Vendas</h5>
-                        <p class="text-muted">Engenharia de prompts para treinar IAs (ChatGPT/Claude) e automação de follow-ups em escala.</p>
-                    </div>
-                    <div class="mb-2">
-                        <h5 class="text-primary fw-bold">📌 Módulo 5: Ritos e Boas Práticas</h5>
-                        <p class="text-muted">Implementação de Dailies de vendas, reuniões de 1on1 e governança de KPIs.</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://api.whatsapp.com/send?phone=5511996337293&text=Olá,%20gostaria%20de%20solicitar%20uma%20Proposta%20para%20os%20Treinamentos%20Comerciais." class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i> Solicitar via WhatsApp</a>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Aulas Práticas -->
-    <div class="modal fade" id="modalPraticas" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title fw-bold"><i class="bi bi-journal-check"></i> Aulas Práticas - Detalhes do Serviço</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body p-4 bg-white">
-                    <div class="mb-4"><h5 class="text-primary fw-bold">1 - Parametrização</h5><p class="text-muted">Escolha entre Método Convencional (Laboratório Multidisciplinar com equipamentos físicos) e Método Digital (Plataforma OVID e Laminário Digital).</p></div>
-                    <div class="mb-4"><h5 class="text-primary fw-bold">2 - Agendamento</h5><p class="text-muted">Envio obrigatório dos horários, dias de cada curso e semestre letivo correspondente.</p></div>
-                    <div class="mb-4"><h5 class="text-primary fw-bold">3 - Comprovação de Aulas</h5><ul class="text-muted"><li>Upload da Lista de Presença assinada no Place.</li><li>Checklist do Tutor Presencial.</li><li>Relatório de Experimento Prático (3 perguntas subjetivas de até 1000 caracteres).</li><li>Upload de 6 boas imagens da turma realizando o experimento prático.</li></ul></div>
-                    <div class="mb-2"><h5 class="text-primary fw-bold">4 - Acompanhamento de Auditorias</h5><p class="text-muted">Garantia de qualidade, regularidade e excelência das práticas laboratoriais dos cursos premium.</p></div>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://api.whatsapp.com/send?phone=5511996337293&text=Olá,%20gostaria%20de%20consultar%20valores%20para%20as%20Aulas%20Práticas." class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i> Solicitar via WhatsApp</a>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Seção Quem Somos -->
-    <section id="sobre" class="py-5 bg-white">
-        <div class="container py-4">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-5 text-center">
-                    <img src="reinaldo.jpg" alt="Reinaldo Oliveira" class="img-fluid rounded shadow-lg border border-3 border-primary" style="max-height: 480px; object-fit: cover; object-position: top center;">
-                </div>
-                <div class="col-lg-7">
-                    <span class="badge bg-primary mb-2">Quem Somos</span>
-                    <h2 class="fw-bold mb-3 text-primary">Reinaldo Oliveira</h2>
-                    <p class="text-muted mb-3">Atuo na área educacional e comercial, conectando estratégia de vendas, liderança de equipes, tecnologia e desenvolvimento humano para transformar objetivos em resultados sustentáveis.</p>
-                    <p class="text-muted mb-3">Minha experiência inclui gestão comercial, definição e acompanhamento de metas, análise de indicadores, CRM, otimização de processos e treinamento de equipes.</p>
-                    <p class="text-muted mb-3">Também venho aprofundando minha atuação em Inteligência Artificial aplicada a negócios, transformando a IA em uma prática para aumentar a produtividade e a experiência do aluno.</p>
-                    <p class="text-muted mb-4">Formação multidisciplinar em Gestão Comercial, Marketing, Educação, Coaching e Desenvolvimento Humano.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5511996337293&text=Olá,%20Reinaldo,%20gostaria%20de%20conversar." target="_blank" class="btn btn-success px-4 py-2 fw-semibold">
-                        <i class="bi bi-whatsapp"></i> Falar com o Reinaldo
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Balão Flutuante do WhatsApp -->
-    <a href="https://api.whatsapp.com/send?phone=5511996337293" class="whatsapp-float" target="_blank" title="Fale pelo WhatsApp">
-        <i class="bi bi-whatsapp"></i>
-    </a>
-
-    <!-- Rodapé Corporativo -->
-    <footer class="footer-custom pt-5 pb-3">
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <!-- Coluna 1: Categorias -->
-                <div class="col-md-3">
-                    <h6><i class="bi bi-grid-fill text-primary"></i> Categorias</h6>
-                    <ul class="list-unstyled small mt-2">
-                        <li class="mb-2"><a href="#servicos">Assessoria Acadêmica</a></li>
-                        <li class="mb-2"><a href="#servicos">Treinamentos Comerciais</a></li>
-                        <li class="mb-2"><a href="#servicos">Aulas Práticas</a></li>
-                    </ul>
-                </div>
-                <!-- Coluna 2: Minha Conta -->
-                <div class="col-md-3">
-                    <h6><i class="bi bi-person-fill text-primary"></i> Minha Conta</h6>
-                    <ul class="list-unstyled small mt-2">
-                        <li class="mb-2"><a href="#sobre">Quem Somos</a></li>
-                        <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#modalCarrinho">Carrinho de Orçamento</a></li>
-                    </ul>
-                </div>
-                <!-- Coluna 3: Contato -->
-                <div class="col-md-3">
-                    <h6><i class="bi bi-headset text-primary"></i> Contato</h6>
-                    <ul class="list-unstyled small mt-2">
-                        <li class="mb-2"><i class="bi bi-whatsapp text-success"></i> (11) 99633-7293</li>
-                        <li class="mb-2"><i class="bi bi-envelope-fill text-warning"></i> reinaldooliveiraassessoria@gmail.com</li>
-                    </ul>
-                </div>
-                <!-- Coluna 4: Compra Segura -->
-                <div class="col-md-3">
-                    <h6><i class="bi bi-shield-lock-fill text-primary"></i> Compra Segura</h6>
-                    <p class="small text-muted mb-2">Ambiente 100% seguro com criptografia SSL.</p>
-                    <div class="d-flex flex-column gap-2 mt-2">
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-warning text-dark fw-bold" style="font-size: 10px;">100% GARANTIDO</span>
-                            <span class="badge bg-success text-white" style="font-size: 10px;"><i class="bi bi-shield-check"></i> Google Safe</span>
-                        </div>
-                        <div>
-                            <span class="badge bg-light text-dark py-1 px-2"><i class="bi bi-lock-fill text-success"></i> SITE 100% SEGURO SSL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="border-secondary">
-            <div class="row align-items-center">
-                <div class="col-md-12 text-center small text-white">
-                    &copy; 2026 Oliveira's Assessoria - Todos os direitos reservados. | CNPJ: 50.835.246/0001-51
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <header class="site-header"><div class="container nav-wrap">
+    <a class="brand" href="#inicio" aria-label="Oliveira's Assessoria, início"><img src="https://raw.githubusercontent.com/reinaldoferreirad/oliveiras-assessoria/main/logo.png" alt="Oliveira's Assessoria"></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav id="menu" class="nav-links" aria-label="Navegação principal"><a href="#servicos">Soluções</a><a href="#metodo">Como funciona</a><a href="#sobre">Sobre</a><a href="#diagnostico">Diagnóstico</a><a class="btn btn-dark" href="#contato">Fale conosco</a></nav>
+  </div></header>
+  <main id="inicio">
+    <section class="hero"><div class="container hero-copy"><span class="eyebrow">Assessoria para o setor educacional</span><h1>Estruture sua operação. Melhore a conversão. Cuide da retenção.</h1><p class="lead">A Oliveira's Assessoria conecta gestão comercial, atendimento e processos acadêmicos para apoiar polos e operações educacionais em seus desafios reais.</p><div class="hero-actions"><a class="btn btn-primary" href="#diagnostico">Solicitar diagnóstico inicial</a><a class="btn btn-outline" href="#servicos">Conhecer as soluções</a></div><p class="hero-note">Atendimento conduzido por Reinaldo Oliveira • Comercial, operação acadêmica e treinamentos</p></div></section>
+    <section class="section audience"><div class="container"><div class="section-head"><span class="eyebrow">Para quem é</span><h2>Uma atuação conectada à rotina da educação</h2><p class="muted">O trabalho é ajustado ao contexto e às prioridades de cada operação.</p></div><div class="grid grid-4"><article class="card"><h3>Polos EAD</h3><p>Organização comercial, acadêmica e operacional.</p></article><article class="card"><h3>Instituições de ensino</h3><p>Atendimento, jornada do aluno e processos.</p></article><article class="card"><h3>Gestores comerciais</h3><p>Equipe, indicadores, CRM e rotina de gestão.</p></article><article class="card"><h3>Equipes de atendimento</h3><p>Padronização, produtividade e relacionamento.</p></article></div></div></section>
+    <section class="section section-alt"><div class="container"><div class="section-head"><span class="eyebrow">Desafios comuns</span><h2>Onde a operação pode estar perdendo oportunidades?</h2><p class="muted">Um diagnóstico ajuda a identificar prioridades antes de definir ferramentas ou treinamentos.</p></div><ul class="pain-list"><li>Leads sem retorno</li><li>Baixa conversão</li><li>Equipe sem processo claro</li><li>CRM pouco utilizado</li><li>Atendimento sem padrão</li><li>Risco de evasão</li><li>Gargalos acadêmicos</li><li>Dificuldades com aulas práticas</li></ul></div></section>
+    <section id="servicos" class="section"><div class="container"><div class="section-head"><span class="eyebrow">Soluções</span><h2>Apoio do primeiro contato à experiência do aluno</h2><p class="muted">As frentes abaixo podem ser combinadas conforme a necessidade identificada.</p></div><div class="grid grid-3">
+      <article class="card service-card"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=700&q=80" alt="Profissionais em reunião de trabalho" loading="lazy"><div class="service-body"><span class="tag">Acadêmico & retenção</span><h3>Assessoria Acadêmica</h3><p>Organização da jornada do aluno, do atendimento e dos processos acadêmicos para identificar gargalos e apoiar a retenção.</p><ul><li>Jornada e pontos de contato</li><li>Suporte e secretaria</li><li>Indicadores de risco de evasão</li><li>Relacionamento e recuperação</li></ul><a class="btn btn-outline" href="#diagnostico" data-interest="Assessoria Acadêmica">Conversar sobre esta solução</a></div></article>
+      <article class="card service-card"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80" alt="Profissional em ambiente corporativo" loading="lazy"><div class="service-body"><span class="tag">Comercial & vendas</span><h3>Treinamentos Comerciais</h3><p>Treinamento e rotinas de gestão para melhorar abordagem, acompanhamento de leads e uso de dados na equipe.</p><ul><li>Prospecção e atendimento</li><li>Objeções e conversão</li><li>Scripts e comunicação</li><li>CRM, indicadores e gestão</li></ul><a class="btn btn-outline" href="#diagnostico" data-interest="Treinamentos Comerciais">Conversar sobre esta solução</a></div></article>
+      <article class="card service-card"><img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=700&q=80" alt="Ambiente de prática e aprendizagem" loading="lazy"><div class="service-body"><span class="tag">Práticas & operação</span><h3>Aulas Práticas</h3><p>Apoio à parametrização, aos agendamentos, à comprovação no Place e ao acompanhamento de auditorias acadêmicas.</p><ul><li>Método convencional ou digital</li><li>Agendamento de aulas</li><li>Registros e comprovações</li><li>Acompanhamento operacional</li></ul><a class="btn btn-outline" href="#diagnostico" data-interest="Aulas Práticas">Conversar sobre esta solução</a></div></article>
+    </div></div></section>
+    <section id="metodo" class="section section-alt"><div class="container"><div class="section-head"><span class="eyebrow">Como funciona</span><h2>Do entendimento do problema à rotina de melhoria</h2></div><div class="grid grid-3 steps"><div class="card step"><h3>Diagnóstico</h3><p>Entendimento da operação, da equipe, dos processos e dos indicadores disponíveis.</p></div><div class="card step"><h3>Prioridades</h3><p>Identificação dos gargalos e definição de um plano de ação viável.</p></div><div class="card step"><h3>Implementação</h3><p>Aplicação das ações combinadas e acompanhamento dos ajustes necessários.</p></div></div></div></section>
+    <section class="section"><div class="container"><div class="ia-panel"><span class="eyebrow">IA aplicada ao trabalho</span><h2>Inteligência artificial com uso prático</h2><p>Na frente comercial e de atendimento, a IA pode apoiar tarefas concretas, sempre com revisão da equipe e adequação ao contexto da instituição.</p><ul><li>Preparação de scripts de atendimento</li><li>Análise de conversas comerciais</li><li>Treinamento e simulações</li><li>Organização de processos</li><li>Apoio à leitura de indicadores</li><li>Comunicação com leads e alunos</li></ul></div></div></section>
+    <section id="sobre" class="section section-alt"><div class="container about"><img src="https://raw.githubusercontent.com/reinaldoferreirad/oliveiras-assessoria/main/reinaldo.jpg" alt="Reinaldo Oliveira" loading="lazy"><div><span class="eyebrow">Quem está por trás</span><h2>Reinaldo Oliveira</h2><p class="lead">Atuação nas áreas educacional e comercial, conectando vendas, liderança de equipes, tecnologia e desenvolvimento humano.</p><p>Minha experiência inclui gestão comercial, acompanhamento de metas e indicadores, CRM, otimização de processos e treinamento de equipes. Também aprofundo minha atuação em inteligência artificial aplicada a negócios e à experiência do aluno.</p><p>Formação multidisciplinar em Gestão Comercial, Marketing, Educação, Coaching e Desenvolvimento Humano.</p><a class="btn btn-dark" href="https://api.whatsapp.com/send?phone=5511996337293&text=Ol%C3%A1%2C%20Reinaldo%2C%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer">Falar com o Reinaldo</a></div></div></section>
+    <section id="diagnostico" class="section diagnosis"><div class="container"><div class="section-head"><span class="eyebrow">Diagnóstico inicial</span><h2>Conte o que sua operação precisa melhorar</h2><p class="muted">Responda às perguntas para receber uma indicação inicial dos temas que merecem atenção. A análise completa depende de uma conversa sobre sua operação.</p></div><div class="form-panel"><form id="diagnosis-form"><div class="form-grid"><div class="field"><label for="operation">Tipo de operação *</label><select id="operation" required><option value="">Selecione</option><option>Polo EAD</option><option>Faculdade</option><option>Escola</option><option>Curso profissionalizante</option><option>Outro</option></select></div><div class="field"><label for="team">Tamanho da equipe *</label><select id="team" required><option value="">Selecione</option><option>1 a 5 pessoas</option><option>6 a 10 pessoas</option><option>11 a 30 pessoas</option><option>Mais de 30 pessoas</option></select></div><fieldset class="field full"><legend>Quais são os principais desafios? *</legend><div class="checks"><label><input type="checkbox" name="challenge" value="Baixa conversão">Baixa conversão</label><label><input type="checkbox" name="challenge" value="Poucos leads">Poucos leads</label><label><input type="checkbox" name="challenge" value="Equipe comercial">Equipe comercial</label><label><input type="checkbox" name="challenge" value="Evasão de alunos">Evasão de alunos</label><label><input type="checkbox" name="challenge" value="Processos acadêmicos">Processos acadêmicos</label><label><input type="checkbox" name="challenge" value="Aulas práticas">Aulas práticas</label><label><input type="checkbox" name="challenge" value="CRM e atendimento">CRM e atendimento</label><label><input type="checkbox" name="challenge" value="Uso de IA">Uso de IA</label></div></fieldset><div class="field"><label for="name">Seu nome *</label><input id="name" name="name" autocomplete="name" required maxlength="80"></div><div class="field"><label for="institution">Instituição *</label><input id="institution" name="institution" autocomplete="organization" required maxlength="100"></div><div class="field"><label for="phone">WhatsApp *</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required minlength="10" maxlength="20" placeholder="(11) 99999-9999"></div><div class="field"><label for="email">E-mail (opcional)</label><input id="email" name="email" type="email" autocomplete="email" maxlength="120"></div><div class="field full"><label for="details">Algo mais que devemos saber? (opcional)</label><textarea id="details" rows="3" maxlength="500"></textarea></div></div><div class="form-actions"><button class="btn btn-dark" type="submit">Ver indicação inicial</button><span id="form-error" role="alert" class="muted"></span></div><p class="form-note">Você verá uma indicação inicial antes de decidir se deseja enviar suas respostas. O envio por e-mail usa o serviço FormSubmit e só ocorre após seu clique.</p></form><div id="result" class="result" aria-live="polite"><h3>Sua indicação inicial</h3><p id="result-summary"></p><ul id="result-points"></ul><p>Esta indicação não substitui uma avaliação da operação e não representa uma previsão de resultados.</p><label class="consent"><input id="email-consent" type="checkbox"> Autorizo o envio dos meus dados e respostas à Oliveira's Assessoria pelo FormSubmit para contato sobre este diagnóstico.</label><div class="form-actions"><button id="send-email" class="btn btn-primary" type="button">Enviar diagnóstico por e-mail</button><span id="send-status" role="status" aria-live="polite"></span></div></div></div></div></section>
+    <section class="section faq"><div class="container"><div class="section-head"><span class="eyebrow">Perguntas frequentes</span><h2>Antes de conversar</h2></div><details><summary>Como começa a assessoria?</summary><p>O primeiro passo é entender sua operação e identificar as prioridades. O escopo é definido após essa conversa.</p></details><details><summary>Posso solicitar apoio em mais de uma frente?</summary><p>Sim. As frentes comercial, acadêmica e de aulas práticas podem ser avaliadas em conjunto conforme sua necessidade.</p></details><details><summary>O diagnóstico do site já é uma proposta?</summary><p>Não. Ele organiza informações para uma conversa inicial. A proposta depende de uma avaliação do contexto e do escopo.</p></details><details><summary>Como funciona o orçamento?</summary><p>Após entender a necessidade e o trabalho envolvido, a Oliveira's Assessoria pode apresentar uma proposta personalizada.</p></details></div></section>
+    <section id="contato" class="section final-cta"><div class="container"><span class="eyebrow">Vamos conversar</span><h2>Identifique os próximos passos para sua operação</h2><p>Conte seu contexto e converse diretamente com Reinaldo Oliveira sobre as prioridades da sua instituição.</p><a class="btn btn-dark" href="https://api.whatsapp.com/send?phone=5511996337293&text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20a%20minha%20opera%C3%A7%C3%A3o%20educacional." target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp</a></div></section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><img src="https://raw.githubusercontent.com/reinaldoferreirad/oliveiras-assessoria/main/logo.png" alt="Oliveira's Assessoria"><p>Assessoria & Treinamentos para operações educacionais.</p></div><div><h3>Navegação</h3><ul><li><a href="#servicos">Soluções</a></li><li><a href="#metodo">Como funciona</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#diagnostico">Diagnóstico</a></li></ul></div><div><h3>Contato</h3><ul><li><a href="https://api.whatsapp.com/send?phone=5511996337293" target="_blank" rel="noopener noreferrer">(11) 99633-7293</a></li><li><a href="mailto:reinaldooliveiraassessoria@gmail.com">reinaldooliveiraassessoria@gmail.com</a></li></ul></div></div><small>© 2026 Oliveira's Assessoria & Treinamentos • CNPJ 50.835.246/0001-51</small></div></footer>
+  <a class="whatsapp" href="https://api.whatsapp.com/send?phone=5511996337293" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">WhatsApp</a>
+  <script>
+    const menuButton=document.querySelector('.menu-toggle');const menu=document.querySelector('#menu');menuButton.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')});menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Abrir menu')}));
+    document.querySelectorAll('[data-interest]').forEach(link=>link.addEventListener('click',()=>{const value=link.dataset.interest;const map={'Assessoria Acadêmica':'Processos acadêmicos','Treinamentos Comerciais':'Equipe comercial','Aulas Práticas':'Aulas práticas'};const choice=document.querySelector(`input[name="challenge"][value="${map[value]}"]`);if(choice)choice.checked=true}));
+    const form=document.querySelector('#diagnosis-form');const error=document.querySelector('#form-error');const result=document.querySelector('#result');const themes={'Baixa conversão':'Revise a jornada do lead, a velocidade de resposta e o acompanhamento até a matrícula.','Poucos leads':'Avalie a origem dos contatos e se as oportunidades atuais recebem acompanhamento consistente.','Equipe comercial':'Observe a clareza dos processos, os scripts e a rotina de gestão da equipe.','Evasão de alunos':'Mapeie sinais de risco e os momentos críticos da jornada do aluno.','Processos acadêmicos':'Identifique etapas com retrabalho e pontos de contato que precisam de padronização.','Aulas práticas':'Confira parametrização, agendamento, registros e comprovações das aulas.','CRM e atendimento':'Verifique o registro de interações, os retornos pendentes e o padrão de atendimento.','Uso de IA':'Escolha tarefas concretas nas quais a IA possa apoiar a equipe com revisão humana.'};
+    const sendButton=document.querySelector('#send-email');const sendStatus=document.querySelector('#send-status');const consent=document.querySelector('#email-consent');let diagnosisPayload=null;
+    form.addEventListener('input',()=>{result.classList.remove('show');diagnosisPayload=null;sendButton.disabled=false;sendStatus.textContent=''});
+    form.addEventListener('submit',event=>{event.preventDefault();error.textContent='';result.classList.remove('show');sendStatus.textContent='';const selected=[...form.querySelectorAll('input[name="challenge"]:checked')].map(input=>input.value);if(!form.reportValidity())return;if(!selected.length){error.textContent='Selecione pelo menos um desafio.';form.querySelector('input[name="challenge"]').focus();return}const phone=form.elements.namedItem('phone').value.replace(/\D/g,'');if(phone.length<10||phone.length>13){error.textContent='Informe um WhatsApp com DDD válido.';form.elements.namedItem('phone').focus();return}const points=document.querySelector('#result-points');points.replaceChildren();selected.forEach(challenge=>{const li=document.createElement('li');li.textContent=themes[challenge];points.append(li)});const institution=form.elements.namedItem('institution').value.trim();document.querySelector('#result-summary').textContent=`Com base nos desafios selecionados para ${institution}, estes pontos merecem uma análise mais detalhada:`;diagnosisPayload={_subject:"Novo diagnóstico inicial - Oliveira's Assessoria",_template:'table',Nome:form.elements.namedItem('name').value.trim(),Instituicao:institution,Tipo_de_operacao:form.elements.namedItem('operation').value,Equipe:form.elements.namedItem('team').value,Desafios:selected.join(', '),WhatsApp:form.elements.namedItem('phone').value.trim(),Email:form.elements.namedItem('email').value.trim(),Observacoes:form.elements.namedItem('details').value.trim(),Indicacao_inicial:selected.map(challenge=>themes[challenge]).join(' | ')};result.classList.add('show');result.scrollIntoView({behavior:'smooth',block:'nearest'})});
+    sendButton.addEventListener('click',async()=>{if(!diagnosisPayload)return;if(!consent.checked){sendStatus.textContent='Marque a autorização para enviar.';consent.focus();return}sendButton.disabled=true;sendStatus.textContent='Enviando...';try{const response=await fetch('https://formsubmit.co/ajax/reinaldooliveiraassessoria@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(diagnosisPayload)});const data=await response.json();if(!response.ok||data.success===false||data.success==='false')throw new Error('Falha no envio');sendStatus.textContent='Enviado. Se for o primeiro envio, confirme a ativação no e-mail recebido do FormSubmit.'}catch(e){sendButton.disabled=false;sendStatus.textContent='Não foi possível enviar agora. Tente novamente mais tarde.'}});
+  </script>
 </body>
 </html>
