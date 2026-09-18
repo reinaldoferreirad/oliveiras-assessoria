@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
-        /* Efeito de Zoom interativo e enquadramento centralizado perfeito */
+        /* Efeito de Zoom interativo e enquadramento ajustado para mostrar os rostos perfeitamente */
         .card-img-wrapper {
             overflow: hidden;
             border-radius: 8px;
@@ -19,7 +19,7 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
-            object-position: center top;
+            object-position: center 25%; /* Foco perfeito nos rostos/centro das fotos */
         }
         .card:hover .card-img-hover {
             transform: scale(1.06);
@@ -257,7 +257,7 @@
         </div>
     </div>
 
-    <!-- Modal Atualizado: Assessoria Acadêmica / Módulo 6 -->
+    <!-- Modal: Assessoria Acadêmica -->
     <div class="modal fade" id="modalAcademica" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
@@ -267,39 +267,25 @@
                 </div>
                 <div class="modal-body p-4 bg-white">
                     <p class="text-muted mb-4">No setor educacional, o comercial não termina na matrícula: ele se perpetua na retenção e no sucesso do estudante ao longo de toda a jornada.</p>
-                    
                     <div class="mb-4">
                         <h5 class="text-primary fw-bold">1. Organização e Processos Acadêmicos</h5>
                         <p class="text-muted">
-                            <strong>Mapeamento da Jornada do Aluno:</strong> Desenho detalhado de todos os pontos de contato, desde a recepção e onboarding (integração inicial) até a conclusão do ciclo ou renovação de matrícula.<br><br>
-                            <strong>Padronização de Suporte e Secretaria:</strong> Alinhamento de processos internos para reduzir gargalos de atendimento, prazos de resposta e ansiedade do estudante, prevenindo a evasão (churn) por falta de suporte.<br><br>
-                            <strong>Aliança Comercial x Acadêmica:</strong> Garantir que a promessa feita pelo time comercial no momento da venda seja rigorosamente entregue pela estrutura acadêmica, eliminando distorções.
+                            <strong>Mapeamento da Jornada do Aluno:</strong> Desenho detalhado de todos os pontos de contato, desde a recepção e onboarding até a conclusão ou renovação.<br><br>
+                            <strong>Padronização de Suporte e Secretaria:</strong> Redução de gargalos e prevenção contra evasão (churn).<br><br>
+                            <strong>Aliança Comercial x Acadêmica:</strong> Garantir que a promessa feita na venda seja entregue.
                         </p>
                     </div>
-
                     <div class="mb-4">
-                        <h5 class="text-primary fw-bold">2. Relacionamento Estratégico com Ferramentas do Parceiro</h5>
-                        <p class="text-muted">
-                            <strong>Uso Inteligente de CRMs Educacionais e Ambientes Virtuais:</strong> Treinamento das equipes para extrair o máximo das ferramentas tecnológicas disponíveis pelo parceiro, automatizando disparos de mensagens e centralizando o histórico do aluno.<br><br>
-                            <strong>Touchpoints Proativos:</strong> Criação de calendários de relacionamento em momentos críticos da vida acadêmica (ex: primeiras semanas de adaptação, período pré-provas e épocas de rematrícula).
-                        </p>
+                        <h5 class="text-primary fw-bold">2. Relacionamento Estratégico</h5>
+                        <p class="text-muted">Uso inteligente de CRMs educacionais e touchpoints proativos em momentos críticos.</p>
                     </div>
-
                     <div class="mb-4">
-                        <h5 class="text-primary fw-bold">3. Análise de Dados para Fidelização e Retenção</h5>
-                        <p class="text-muted">
-                            <strong>Indicadores de Evasão Precoce (Early Warnings):</strong> Implementação de análises baseadas em dados para identificar sinais de alerta (como queda drástica de frequência no AVA - Ambiente Virtual de Aprendizagem, notas baixas recorrentes ou ausência de interação).<br><br>
-                            <strong>Segmentação de Alunos:</strong> Análise da base para identificar perfis propensos à inadimplência ou ao trancamento, permitindo ações preventivas antes que o pedido de cancelamento aconteça.<br><br>
-                            <strong>Programas de Indicação (Member Get Member):</strong> Estratégias estruturadas para transformar alunos satisfeitos em promotores ativos da instituição.
-                        </p>
+                        <h5 class="text-primary fw-bold">3. Análise de Dados para Retenção</h5>
+                        <p class="text-muted">Indicadores de evasão precoce (Early Warnings) e programas de indicação (Member Get Member).</p>
                     </div>
-
                     <div class="mb-2">
-                        <h5 class="text-primary fw-bold">4. Técnicas de Retenção e Recuperação de Alunos</h5>
-                        <p class="text-muted">
-                            <strong>Abordagem Consultiva de Retenção:</strong> Metodologia humanizada e empática para lidar com pedidos de trancamento, ouvindo o motivo raiz e oferecendo soluções viáveis.<br><br>
-                            <strong>Upsell e Cross-sell Educacional:</strong> Estratégias para ofertar pós-graduações, cursos de extensão ou especializações para alunos que estão finalizando seus ciclos atuais, maximizando o LTV (Lifetime Value).
-                        </p>
+                        <h5 class="text-primary fw-bold">4. Técnicas de Retenção e Recuperação</h5>
+                        <p class="text-muted">Abordagem consultiva humanizada e estratégias de upsell/cross-sell educacional.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -310,7 +296,7 @@
         </div>
     </div>
 
-    <!-- Modal Atualizado: Treinamentos Comerciais / O DNA do Treinamento -->
+    <!-- Modal: Treinamentos Comerciais -->
     <div class="modal fade" id="modalTreinamentos" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
@@ -320,52 +306,25 @@
                 </div>
                 <div class="modal-body p-4 bg-white">
                     <p class="text-muted mb-4">Transformamos equipes comuns em máquinas de alta performance de vendas e retenção, unindo técnicas tradicionais validadas, engenharia de prompts aplicada à inteligência artificial e processos acadêmicos estruturados.</p>
-
                     <div class="mb-4">
-                        <h5 class="text-primary fw-bold">📌 Módulo 1: Abordagem, Prospecção e Padronização do Atendimento</h5>
-                        <p class="text-muted">
-                            O primeiro contato dita o ritmo da relação com o cliente ou aluno. Se a entrada é falha, o custo de aquisição (CAC) dispara e a conversão despenca.<br><br>
-                            <strong>Padronização do Atendimento (Omnichannel):</strong> Criação de scripts e playbooks de atendimento para WhatsApp, telefone, e-mail e chat, garantindo consistência na voz da marca sem soar robótico. Técnicas de escuta ativa e diagnóstico rápido para identificar a verdadeira dor do lead nos primeiros segundos de contato.<br><br>
-                            <strong>Gestão de Tráfego de Leads (Inbound e Outbound):</strong><br>
-                            • <em>Atendimento Passivo (Inbound):</em> Protocolos de velocidade de resposta (speed-to-lead), qualificação inteligente e conversão de curiosos em potenciais compradores.<br>
-                            • <em>Atendimento Ativo (Outbound):</em> Estratégias de prospecção fria (cold calling e cold mailing), criação de cadências de contato e campanhas assertivas via WhatsApp.
-                        </p>
+                        <h5 class="text-primary fw-bold">📌 Módulo 1: Abordagem, Prospecção e Padronização</h5>
+                        <p class="text-muted">Playbooks de atendimento omnichannel, qualificação de leads Inbound e cadências ativas Outbound.</p>
                     </div>
-
                     <div class="mb-4">
-                        <h5 class="text-primary fw-bold">📌 Módulo 2: Gestão Avançada e Contorno de Objeções</h5>
-                        <p class="text-muted">
-                            O "não" ou o "está caro" na maioria das vezes significam apenas que o cliente ainda não viu valor suficiente ou tem dúvidas não esclarecidas.<br><br>
-                            <strong>Matriz de Objeções Personalizada:</strong> Mapeamento prévio das barreiras mais comuns do seu nicho (preço, tempo, concorrência, burocracia ou desconfiança).<br><br>
-                            <strong>Técnicas de Conversão e Reversão:</strong> Uso de metodologias de contorno (como a técnica do isolamento de objeção, inversão de valor e ancoragem de preço). Treinamento prático de simulações (role-play) com cenários de clientes altamente difíceis e resistentes.
-                        </p>
+                        <h5 class="text-primary fw-bold">📌 Módulo 2: Gestão de Objeções e Conversão</h5>
+                        <p class="text-muted">Matriz de barreiras (preço, tempo, concorrência) e simulações práticas (role-play).</p>
                     </div>
-
                     <div class="mb-4">
-                        <h5 class="text-primary fw-bold">📌 Módulo 3: Copywriting Comercial e Gatilhos Mentais Aplicados</h5>
-                        <p class="text-muted">
-                            A palavra certa, no momento certo, gera urgência e direciona o cliente para a tomada de decisão.<br><br>
-                            <strong>Escrita Persuasiva para Vendas:</strong> Estruturas de copies para mensagens de fechamento, recuperação de carrinhos ou propostas comerciais que geram alta taxa de abertura e resposta.<br><br>
-                            <strong>Storytelling em Vendas:</strong> Como construir narrativas comerciais que geram conexão emocional imediata, demonstrando autoridade e provas sociais reais.
-                        </p>
+                        <h5 class="text-primary fw-bold">📌 Módulo 3: Copywriting e Gatilhos Mentais</h5>
+                        <p class="text-muted">Escrita persuasiva para propostas e storytelling com conexões emocionais de urgência.</p>
                     </div>
-
                     <div class="mb-4">
-                        <h5 class="text-primary fw-bold">📌 Módulo 4: Inteligência Artificial e Engenharia de Prompts para Vendas</h5>
-                        <p class="text-muted">
-                            Inovação e produtividade em escala através do uso prático de IAs generativas (como ChatGPT, Claude e ferramentas de automação).<br><br>
-                            <strong>Engenharia de Prompts para Comerciais:</strong> Como construir prompts cirúrgicos para treinar a IA a gerar roteiros de abordagem, simular clientes-alvo e fornecer feedbacks em tempo real sobre os pitchs da equipe.<br><br>
-                            <strong>Automação e Produtividade em Escala:</strong> Uso de IA para redigir e-mails de follow-up altamente personalizados, resumir reuniões de alinhamento e estruturar análises de desempenho do time de vendas.
-                        </p>
+                        <h5 class="text-primary fw-bold">📌 Módulo 4: Inteligência Artificial em Vendas</h5>
+                        <p class="text-muted">Engenharia de prompts para treinar IAs (ChatGPT/Claude) e automação de follow-ups em escala.</p>
                     </div>
-
                     <div class="mb-2">
-                        <h5 class="text-primary fw-bold">📌 Módulo 5: Ações, Ritos e Boas Práticas Comerciais</h5>
-                        <p class="text-muted">
-                            Vendas de alta performance não acontecem por acaso; elas são fruto de cultura, rotina e acompanhamento de métricas.<br><br>
-                            <strong>Ritos de Gestão Diária e Semanal:</strong> Implementação de Dailies de vendas (reuniões rápidas de alinhamento diário), reuniões de 1on1 e alinhamento de metas.<br><br>
-                            <strong>Governança e Indicadores (KPIs):</strong> Monitoramento de taxas de conversão por etapa do funil, tempo médio de atendimento, ticket médio e custo por lead.
-                        </p>
+                        <h5 class="text-primary fw-bold">📌 Módulo 5: Ritos e Boas Práticas</h5>
+                        <p class="text-muted">Implementação de Dailies de vendas, reuniões de 1on1 e governança de KPIs.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -425,7 +384,7 @@
         <i class="bi bi-whatsapp"></i>
     </a>
 
-    <!-- Rodapé Corporativo em 4 Colunas -->
+    <!-- Rodapé Corporativo -->
     <footer class="footer-custom pt-5 pb-3">
         <div class="container">
             <div class="row g-4 mb-4">
@@ -454,7 +413,7 @@
                         <li class="mb-2"><i class="bi bi-envelope-fill text-warning"></i> reinaldooliveiraassessoria@gmail.com</li>
                     </ul>
                 </div>
-                <!-- Coluna 4: Compra Segura com os Selos Exatos -->
+                <!-- Coluna 4: Compra Segura -->
                 <div class="col-md-3">
                     <h6><i class="bi bi-shield-lock-fill text-primary"></i> Compra Segura</h6>
                     <p class="small text-muted mb-2">Ambiente 100% seguro com criptografia SSL.</p>
@@ -471,7 +430,6 @@
             </div>
             <hr class="border-secondary">
             <div class="row align-items-center">
-                <!-- CNPJ e Direitos Reservados em Branco -->
                 <div class="col-md-12 text-center small text-white">
                     &copy; 2026 Oliveira's Assessoria - Todos os direitos reservados. | CNPJ: 50.835.246/0001-51
                 </div>
